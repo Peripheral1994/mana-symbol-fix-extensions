@@ -1,6 +1,6 @@
 {
   "name": "Judge Center Mana Symbol fix",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "This extension fixes the Mana Symbols in Judge Center exams",
   "homepage_url": "http://apps.magicjudges.org/judges/vquaiato/",
