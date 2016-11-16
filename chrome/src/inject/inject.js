@@ -26,20 +26,22 @@ chrome.extension.sendMessage({}, function(response) {
 				if(el) el["src"] = baseFix + by + "&type=symbol";
 			}
 		}
-
-		var blacks = getAll(getBaseXPathErrorUrl("B"));
-		var reds = getAll(getBaseXPathErrorUrl("R"));
-		var whites = getAll(getBaseXPathErrorUrl("W"));
-		var greens = getAll(getBaseXPathErrorUrl("G"));
-		var blues = getAll(getBaseXPathErrorUrl("U"));
-		var taps = getAll(getBaseXPathErrorUrl("T"));
-
-		replaceWithCorrectUrl(blacks, "black");
-		replaceWithCorrectUrl(reds, "red");
-		replaceWithCorrectUrl(whites, "white");
-		replaceWithCorrectUrl(greens, "green");
-		replaceWithCorrectUrl(blues, "blue");
-		replaceWithCorrectUrl(taps, "tap");
+		
+		var symbols = {
+			black: "B",
+			red: "R",
+			white: "W",
+			green: "G",
+			blue: "U",
+			tap: "T",
+			x: "X"
+		}
+		
+		for (var symbol in symbols){
+		
+			replaceWithCorrectUrl(getAll(getBaseXPathErrorUrl(symbols[symbol])), symbol);
+		
+		}
 
 		for(var i = 0;i<21;i++) {
 			replaceWithNumberCorrectUrl(getAll(getBaseXPathErrorUrl(i)), i);
