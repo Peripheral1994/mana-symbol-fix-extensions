@@ -27,6 +27,8 @@ chrome.extension.sendMessage({}, function(response) {
 			}
 		}
 		
+		//The key (for example, 'black' or 'red') should be the name of the <NAME>.gif we're trying to access.
+		//The key's value (for example, 'B' or 'R') should be the value of the old image, like 'Symbol_B_mana.gif'
 		var symbols = {
 			black: "B",
 			red: "R",
