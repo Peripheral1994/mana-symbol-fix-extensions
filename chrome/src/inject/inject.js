@@ -35,12 +35,10 @@ chrome.extension.sendMessage({}, function(response) {
 			blue: "U",
 			tap: "T",
 			x: "X"
-		}
+		};
 		
-		for (var symbol in symbols){
-		
-			replaceWithCorrectUrl(getAll(getBaseXPathErrorUrl(symbols[symbol])), symbol);
-		
+		for (var type in symbols){
+			replaceWithCorrectUrl(getAll(getBaseXPathErrorUrl(symbols[type])), type);
 		}
 
 		for(var i = 0;i<21;i++) {
